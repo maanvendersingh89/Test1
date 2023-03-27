@@ -1,0 +1,6 @@
+framework module Pods_LetsTrackTestTests {
+  umbrella header "Pods-LetsTrackTestTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

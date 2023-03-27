@@ -1,0 +1,115 @@
+{
+    "result": {
+        "code": 1,
+        "msg": "",
+        "res": null
+    },
+    "CircleCount": 0,
+    "CircleList": [
+        {
+            "CircleId": 2893,
+            "CircleName": "Test with Time",
+            "CircleColorCode": "#FF5959",
+            "CircleType": "Family",
+            "IsActive": 0,
+            "IsPersonal": false,
+            "IsExpired": false,
+            "MemberCount": 2,
+            "totalTimeSlot": 525600,
+            "createdDate": 1663322431,
+            "noOfVisits": 23
+        },
+        {
+            "CircleId": 3276,
+            "CircleName": "Lt",
+            "CircleColorCode": "#FF5959",
+            "CircleType": "Family",
+            "IsActive": 0,
+            "IsPersonal": false,
+            "IsExpired": true,
+            "MemberCount": 2,
+            "totalTimeSlot": 30,
+            "createdDate": 1676290864,
+            "noOfVisits": 25
+        },
+        {
+            "CircleId": 3277,
+            "CircleName": "Family",
+            "CircleColorCode": "#FFBABA",
+            "CircleType": "Family",
+            "IsActive": 0,
+            "IsPersonal": false,
+            "IsExpired": true,
+            "MemberCount": 1,
+            "totalTimeSlot": 30,
+            "createdDate": 1676290931,
+            "noOfVisits": 3
+        },
+        {
+            "CircleId": 3278,
+            "CircleName": "Vikas Bhatt",
+            "CircleColorCode": "#F2C230",
+            "CircleType": "Family",
+            "IsActive": 0,
+            "IsPersonal": false,
+            "IsExpired": true,
+            "MemberCount": 1,
+            "totalTimeSlot": 30,
+            "createdDate": 1676291089,
+            "noOfVisits": 1
+        },
+        {
+            "CircleId": 3288,
+            "CircleName": "Vikas",
+            "CircleColorCode": "#FF5959",
+            "CircleType": "Family",
+            "IsActive": 0,
+            "IsPersonal": false,
+            "IsExpired": true,
+            "MemberCount": 1,
+            "totalTimeSlot": 30,
+            "createdDate": 1676293771,
+            "noOfVisits": 3
+        },
+        {
+            "CircleId": 3319,
+            "CircleName": "Add Device Test",
+            "CircleColorCode": "#FFD34A",
+            "CircleType": "Friends",
+            "IsActive": 0,
+            "IsPersonal": false,
+            "IsExpired": false,
+            "MemberCount": 4,
+            "totalTimeSlot": 525600,
+            "createdDate": 1676441767,
+            "noOfVisits": 5
+        },
+        {
+            "CircleId": 3327,
+            "CircleName": "Test Circle",
+            "CircleColorCode": "#FF5959",
+            "CircleType": "Family",
+            "IsActive": 0,
+            "IsPersonal": false,
+            "IsExpired": true,
+            "MemberCount": 1,
+            "totalTimeSlot": 30,
+            "createdDate": 1676546826,
+            "noOfVisits": 0
+        }
+    ],
+    "BleTagList": [
+        {
+            "bleTagId": 256,
+            "shortName": "Keys",
+            "iconPath": "",
+            "iconId": 1,
+            "userId": 328286,
+            "bleTagMacID": "F7:16:D0:C2:E8:B6",
+            "markedAsLost": false,
+            "recvTime": 1676592000,
+            "locationStatus": 0
+        }
+    ],
+    "DeviceListList": []
+}
