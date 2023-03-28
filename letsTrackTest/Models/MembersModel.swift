@@ -8,17 +8,17 @@
 import Foundation
 
 struct MembersModel : Codable {
-    let result : Result?
-    let userDetail : [UserDetail]?
-    let deviceDetails : [DeviceDetails]?
-    let bleTagDetail : [BleTagDetail]?
-    let circleDetail : [CircleDetail]?
-    let photoList : [String]?
-    let myDevice : [String]?
-    let myBleTag : [MyBleTag]?
-    let checkPoints : String?
-    let deletedCheckPoints : [String]?
-    let checkPoints_zone : [String]?
+    var result : Result?
+    var userDetail : [UserDetail]?
+    var deviceDetails : [DeviceDetails]?
+    var bleTagDetail : [BleTagDetail]?
+    var circleDetail : [CircleDetail]?
+    var photoList : [String]?
+    var myDevice : [String]?
+    var myBleTag : [MyBleTag]?
+    var checkPoints : String?
+    var deletedCheckPoints : [String]?
+    var checkPoints_zone : [String]?
 
     enum CodingKeys: String, CodingKey {
 
@@ -39,34 +39,34 @@ struct MembersModel : Codable {
 }
 
 struct UserDetail : Codable {
-    let userId : Int?
-    let mobileNo : String?
-    let name : String?
-    let profilePic : String?
-    let lat : String?
-    let long : String?
-    let chatServerID : String?
-    let time : String?
-    let tsTime : Int?
-    let country : String?
-    let battery : Int?
-    let onlineOffline : String?
-    let tsTime1 : Int?
-    let transition : Int?
-    let isLocationSharingAllowed : Bool?
-    let isSoundNotificationAllowed : Bool?
-    let permissionOnOff : Bool?
-    let permissionOnOffStatusChangedTime_utc : Int?
-    let locationsharingStatusChangedTime_utc : Int?
-    let onlineOfflineStatus : Bool?
-    let gpsOnOffStatusChangedTime_utc : Int?
-    let isMemberActive : Int?
-    let isSaveMediaFile : Bool?
-    let totalTimeSlot : Int?
-    let column1 : String?
-    let isExpired : Int?
-    let showOnHomeScreen : Bool?
-    let circleId : Int?
+    var userId : Int?
+    var mobileNo : String?
+    var name : String?
+    var profilePic : String?
+    var lat : String?
+    var long : String?
+    var chatServerID : String?
+    var time : String?
+    var tsTime : Int?
+    var country : String?
+    var battery : Int?
+    var onlineOffline : String?
+    var tsTime1 : Int?
+    var transition : Int?
+    var isLocationSharingAllowed : Bool?
+    var isSoundNotificationAllowed : Bool?
+    var permissionOnOff : Bool?
+    var permissionOnOffStatusChangedTime_utc : Int?
+    var locationsharingStatusChangedTime_utc : Int?
+    var onlineOfflineStatus : Bool?
+    var gpsOnOffStatusChangedTime_utc : Int?
+    var isMemberActive : Int?
+    var isSaveMediaFile : Bool?
+    var totalTimeSlot : Int?
+    var column1 : String?
+    var isExpired : Int?
+    var showOnHomeScreen : Bool?
+    var circleId : Int?
 
     enum CodingKeys: String, CodingKey {
 
@@ -105,34 +105,34 @@ struct UserDetail : Codable {
 }
 
 struct DeviceDetails : Codable {
-    let name : String?
-    let userId : String?
-    let lat : String?
-    let long : String?
-    let prvlat : String?
-    let prvlng : String?
-    let time : String?
-    let country : String?
-    let battery : Int?
-    let onlineOffline : String?
-    let aC : String?
-    let eng : String?
-    let speed : String?
-    let engCutStatus : String?
-    let isValueAvailable : Bool?
-    let isDriverBehaviourAvailable : Bool?
-    let status1 : String?
-    let status : String?
-    let iMEI : String?
-    let deviceId : Int?
-    let iconType : Int?
-    let subscriptionDays : String?
-    let sharetype : String?
-    let state : String?
-    let distance : Double?
-    let parkingStatus : Bool?
-    let isTrackingSharingAllowed : Int?
-    let sharedUserName : String?
+    var name : String?
+    var userId : String?
+    var lat : String?
+    var long : String?
+    var prvlat : String?
+    var prvlng : String?
+    var time : String?
+    var country : String?
+    var battery : Int?
+    var onlineOffline : String?
+    var aC : String?
+    var eng : String?
+    var speed : String?
+    var engCutStatus : String?
+    var isValueAvailable : Bool?
+    var isDriverBehaviourAvailable : Bool?
+    var status1 : String?
+    var status : String?
+    var iMEI : String?
+    var deviceId : Int?
+    var iconType : Int?
+    var subscriptionDays : String?
+    var sharetype : String?
+    var state : String?
+    var distance : Double?
+    var parkingStatus : Bool?
+    var isTrackingSharingAllowed : Int?
+    var sharedUserName : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -171,27 +171,27 @@ struct DeviceDetails : Codable {
 }
 
 struct BleTagDetail : Codable {
-    let bleTagMacID : String?
-    let addedByUserId : Int?
-    let shortName : String?
-    let lat : Double?
-    let lng : Double?
-    let markedAsLost : Bool?
-    let iconPath : String?
-    let iconId : Int?
-    let recvTime : Int?
-    let locationStatus : Int?
-    let bleTagId : Int?
-    let addedDate : String?
-    let activationDate : String?
-    let sharedUserName : String?
-    let bleType : String?
-    let relayLocStatus : String?
-    let relayLockedByUser : String?
-    let relayLockedLocation_lat : String?
-    let relayLockedLocation_lng : String?
-    let isParked : Bool?
-    let isAdmin : Int?
+    var bleTagMacID : String?
+    var addedByUserId : Int?
+    var shortName : String?
+    var lat : Double?
+    var lng : Double?
+    var markedAsLost : Bool?
+    var iconPath : String?
+    var iconId : Int?
+    var recvTime : Int?
+    var locationStatus : Int?
+    var bleTagId : Int?
+    var addedDate : String?
+    var activationDate : String?
+    var sharedUserName : String?
+    var bleType : String?
+    var relayLocStatus : String?
+    var relayLockedByUser : String?
+    var relayLockedLocation_lat : String?
+    var relayLockedLocation_lng : String?
+    var isParked : Bool?
+    var isAdmin : Int?
 
     enum CodingKeys: String, CodingKey {
 
@@ -222,20 +222,20 @@ struct BleTagDetail : Codable {
 }
 
 struct CircleDetail : Codable {
-    let ciecleId : Int?
-    let totalTimeSlot : Int?
-    let expiredTime : String?
-    let circleColorCode : String?
-    let circleCode : Int?
-    let msgToShare : String?
-    let circleName : String?
-    let isPersonal : Bool?
-    let adminName : String?
-    let adminUserId : String?
-    let circleType : String?
-    let createdSince : Int?
-    let isRequestSentToJoin : Bool?
-    let isExpired : Bool?
+   var ciecleId : Int?
+   var totalTimeSlot : Int?
+   var expiredTime : String?
+   var circleColorCode : String?
+   var circleCode : Int?
+   var msgToShare : String?
+   var circleName : String?
+   var isPersonal : Bool?
+   var adminName : String?
+   var adminUserId : String?
+   var circleType : String?
+   var createdSince : Int?
+   var isRequestSentToJoin : Bool?
+   var isExpired : Bool?
 
     enum CodingKeys: String, CodingKey {
 
@@ -258,27 +258,27 @@ struct CircleDetail : Codable {
 }
 
 struct MyBleTag : Codable {
-    let bleTagMacID : String?
-    let addedByUserId : Int?
-    let shortName : String?
-    let lat : Double?
-    let lng : Double?
-    let markedAsLost : Bool?
-    let iconPath : String?
-    let iconId : Int?
-    let recvTime : Int?
-    let locationStatus : Int?
-    let bleTagId : Int?
-    let addedDate : String?
-    let activationDate : String?
-    let sharedUserName : String?
-    let bleType : String?
-    let relayLocStatus : String?
-    let relayLockedByUser : String?
-    let relayLockedLocation_lat : String?
-    let relayLockedLocation_lng : String?
-    let isParked : Bool?
-    let isAdmin : Int?
+    var bleTagMacID : String?
+    var addedByUserId : Int?
+    var shortName : String?
+    var lat : Double?
+    var lng : Double?
+    var markedAsLost : Bool?
+    var iconPath : String?
+    var iconId : Int?
+    var recvTime : Int?
+    var locationStatus : Int?
+    var bleTagId : Int?
+    var addedDate : String?
+    var activationDate : String?
+    var sharedUserName : String?
+    var bleType : String?
+    var relayLocStatus : String?
+    var relayLockedByUser : String?
+    var relayLockedLocation_lat : String?
+    var relayLockedLocation_lng : String?
+    var isParked : Bool?
+    var isAdmin : Int?
 
     enum CodingKeys: String, CodingKey {
 

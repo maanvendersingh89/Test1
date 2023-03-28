@@ -41,3 +41,18 @@ extension UIImage {
         return image!
     }
 }
+
+public extension UICollectionView{
+    
+    func setUIedge(numberOfItem: Int){
+        if numberOfItem == 1{
+            self.contentInset = UIEdgeInsets(top: 0, left: self.frame.size.width/2-50, bottom: 0, right: 0)
+        }
+       else if numberOfItem == 2{
+           self.contentInset = UIEdgeInsets(top: 0, left: (self.frame.size.width/2)/2, bottom: 0, right: 0)
+        }
+        else{
+            self.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        }
+    }
+}

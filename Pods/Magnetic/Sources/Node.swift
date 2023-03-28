@@ -19,6 +19,7 @@ import SpriteKit
         label.width = self.frame.width
         label.separator = " "
         label.isExpired = isExpired
+        
         addChild(label)
         return label
     }()
@@ -232,7 +233,9 @@ import SpriteKit
         self.isExpired = isexpired ?? false
         self.strokeColor = .clear
         _ = self.text
+            self.position = CGPoint(x: 10, y: 0)
         configure(text: text,count: count , image: image, color: color)
+        
         self.isAccessibilityElement = true
         self.shouldGroupAccessibilityChildren = true
     }
@@ -320,8 +323,11 @@ import SpriteKit
           var transform = CGAffineTransform.identity.scaledBy(x: marginScale, y: marginScale)
           let body = SKPhysicsBody(polygonFrom: path.copy(using: &transform)!)
           body.allowsRotation = false
-          body.friction = 0
-          body.linearDamping = 3
+            body.friction = 1
+            body.linearDamping = 1
+            body.angularDamping = 2
+            body.restitution = 0
+            body.usesPreciseCollisionDetection = true
           return body
         }()
     }
@@ -333,7 +339,7 @@ import SpriteKit
         self.originalFontColor = fontColor
         self.originalColor = fillColor
         
-        let scaleAction = SKAction.scale(to: size, duration: animationDuration)
+        let scaleAction = SKAction.scale(to: size, duration: 0)
         
         if let selectedFontColor = selectedFontColor {
             label.run(.colorTransition(from: originalFontColor, to: selectedFontColor))
@@ -343,7 +349,7 @@ import SpriteKit
         if let selectedColor = selectedColor {
           run(.group([
             scaleAction,
-            .colorTransition(from: originalColor, to: selectedColor, duration: animationDuration)
+            .colorTransition(from: originalColor, to: selectedColor, duration: 0)
           ]))
         } else {
           run(scaleAction)
@@ -413,7 +419,7 @@ import SpriteKit
      - parameter completion: The block to execute when the animation is complete. You must call this handler and should do so as soon as possible.
      */
     open func removedAnimation(completion: @escaping () -> Void) {
-        run(.group([.fadeOut(withDuration: animationDuration), .scale(to: 0, duration: animationDuration)]), completion: completion)
+        run(.group([.fadeOut(withDuration: animationDuration), .scale(to: 0, duration: 0)]), completion: completion)
     }
     
 }

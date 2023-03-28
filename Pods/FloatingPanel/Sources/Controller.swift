@@ -126,7 +126,15 @@ open class FloatingPanelController: UIViewController {
     public var surfaceView: SurfaceView! {
         return floatingPanel.surfaceView
     }
-
+   
+    @objc
+    public var leftEge: NSLayoutXAxisAnchor!
+   
+    @objc
+    public var rightEge: NSLayoutXAxisAnchor!
+    
+    
+    
     /// Returns the backdrop view managed by the controller object.
     @objc
     public var backdropView: BackdropView! {
@@ -364,6 +372,7 @@ open class FloatingPanelController: UIViewController {
     // MARK:- Privates
 
     private func shouldUpdateLayout(from previous: UITraitCollection, to new: UITraitCollection) -> Bool {
+        
         return previous.horizontalSizeClass != new.horizontalSizeClass
             || previous.verticalSizeClass != new.verticalSizeClass
             || previous.preferredContentSizeCategory != new.preferredContentSizeCategory

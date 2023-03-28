@@ -30,3 +30,18 @@ extension UIColor {
 }
 
 
+extension UIView{
+   
+    func setBackView(isExpired: Bool)-> UIView{
+       
+        if !isExpired{
+            self.layer.cornerRadius = self.frame.size.height/2
+            self.backgroundColor = .clear
+            self.layer.borderWidth = 1
+            self.layer.borderColor = UIColor.lightGray.cgColor
+            return self
+        }
+        self.layer.cornerRadius = 5
+        return self
+    }
+}

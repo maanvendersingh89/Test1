@@ -110,6 +110,16 @@ import SpriteKit
         let y = CGFloat.random(node.frame.height, frame.height - node.frame.height)
         node.position = CGPoint(x: x, y: y)
         super.addChild(node)
+        
+        
+        for i in 0..<super.children.count {
+            // Calculate the position of the child node based on its index
+            var position = super.children[i].position
+            position.x = position.x - 10
+            position.y = position.y - 10
+            super.children[i].position = position
+        }
+        
     }
     
 }
@@ -129,7 +139,7 @@ extension Magnetic {
         
         isDragging = true
         
-        moveNodes(location: location, previous: previous)
+     //   moveNodes(location: location, previous: previous)
     }
     
     override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {

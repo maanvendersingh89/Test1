@@ -2,3 +2,4 @@ ${PODS_ROOT}/Target Support Files/Pods-LetsTrackTest/Pods-LetsTrackTest-framewor
 ${BUILT_PRODUCTS_DIR}/FloatingPanel/FloatingPanel.framework
 ${BUILT_PRODUCTS_DIR}/Magnetic/Magnetic.framework
 ${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
+${BUILT_PRODUCTS_DIR}/WatchLayout/WatchLayout.framework

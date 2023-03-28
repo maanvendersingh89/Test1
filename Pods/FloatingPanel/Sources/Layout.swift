@@ -31,6 +31,7 @@ open class FloatingPanelBottomLayout: NSObject, FloatingPanelLayout {
     }
 
     open var anchors: [FloatingPanelState: FloatingPanelLayoutAnchoring]  {
+        
         return [
             .full: FloatingPanelLayoutAnchor(absoluteInset: 18.0, edge: .top, referenceGuide: .safeArea),
             .half: FloatingPanelLayoutAnchor(fractionalInset: 0.5, edge: .bottom, referenceGuide: .safeArea),

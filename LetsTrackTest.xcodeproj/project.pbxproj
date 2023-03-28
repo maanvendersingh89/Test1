@@ -10,7 +10,6 @@
 		130BE3E741271CE69995D52E /* Pods_LetsTrackTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34F84018060BADFBFD4C77D3 /* Pods_LetsTrackTestTests.framework */; };
 		18402A9F29CC8DF300278A89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18402A9E29CC8DF300278A89 /* AppDelegate.swift */; };
 		18402AA129CC8DF300278A89 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18402AA029CC8DF300278A89 /* SceneDelegate.swift */; };
-		18402AA329CC8DF300278A89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18402AA229CC8DF300278A89 /* ViewController.swift */; };
 		18402AA629CC8DF300278A89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18402AA429CC8DF300278A89 /* Main.storyboard */; };
 		18402AA829CC8DF600278A89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18402AA729CC8DF600278A89 /* Assets.xcassets */; };
 		18402AAB29CC8DF600278A89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18402AA929CC8DF600278A89 /* LaunchScreen.storyboard */; };
@@ -35,6 +34,10 @@
 		18A8BE0829D0262700BC4F86 /* MapMarkerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A8BE0729D0262700BC4F86 /* MapMarkerModel.swift */; };
 		18A8BE0A29D07DBC00BC4F86 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A8BE0929D07DBC00BC4F86 /* LocationManager.swift */; };
 		18A8BE0C29D0A62600BC4F86 /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A8BE0B29D0A62600BC4F86 /* ImagePickerManager.swift */; };
+		18A8BE1929D2299400BC4F86 /* FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A8BE1829D2299400BC4F86 /* FlowLayout.swift */; };
+		18A8BE1B29D229B800BC4F86 /* CircleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A8BE1A29D229B800BC4F86 /* CircleVC.swift */; };
+		18A8BE2029D2C03700BC4F86 /* BubbleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A8BE1E29D2C03700BC4F86 /* BubbleCollectionViewCell.swift */; };
+		18A8BE2129D2C03700BC4F86 /* BubbleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A8BE1F29D2C03700BC4F86 /* BubbleCollectionViewCell.xib */; };
 		49AB9BE9F89D8355F0EFD1F1 /* Pods_LetsTrackTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAE81117723790BF72F434F /* Pods_LetsTrackTest.framework */; };
 		89ACC0DE61E2870E238269DD /* Pods_LetsTrackTest_LetsTrackTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7EC0794D70222E95354D55F /* Pods_LetsTrackTest_LetsTrackTestUITests.framework */; };
 /* End PBXBuildFile section */
@@ -61,7 +64,6 @@
 		18402A9B29CC8DF300278A89 /* LetsTrackTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsTrackTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18402A9E29CC8DF300278A89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18402AA029CC8DF300278A89 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		18402AA229CC8DF300278A89 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		18402AA529CC8DF300278A89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18402AA729CC8DF600278A89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18402AAA29CC8DF600278A89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -89,6 +91,10 @@
 		18A8BE0729D0262700BC4F86 /* MapMarkerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarkerModel.swift; sourceTree = "<group>"; };
 		18A8BE0929D07DBC00BC4F86 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		18A8BE0B29D0A62600BC4F86 /* ImagePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
+		18A8BE1829D2299400BC4F86 /* FlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowLayout.swift; sourceTree = "<group>"; };
+		18A8BE1A29D229B800BC4F86 /* CircleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleVC.swift; sourceTree = "<group>"; };
+		18A8BE1E29D2C03700BC4F86 /* BubbleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleCollectionViewCell.swift; sourceTree = "<group>"; };
+		18A8BE1F29D2C03700BC4F86 /* BubbleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BubbleCollectionViewCell.xib; sourceTree = "<group>"; };
 		34F84018060BADFBFD4C77D3 /* Pods_LetsTrackTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LetsTrackTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		514FCCC3AAE7C6DD2E043080 /* Pods-LetsTrackTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetsTrackTest.release.xcconfig"; path = "Target Support Files/Pods-LetsTrackTest/Pods-LetsTrackTest.release.xcconfig"; sourceTree = "<group>"; };
 		758A1890294B34D06166CE2B /* Pods-LetsTrackTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetsTrackTest.debug.xcconfig"; path = "Target Support Files/Pods-LetsTrackTest/Pods-LetsTrackTest.debug.xcconfig"; sourceTree = "<group>"; };
@@ -155,7 +161,7 @@
 				18402ADC29CC962B00278A89 /* Network */,
 				18A8BE1029D0C90700BC4F86 /* Controllers */,
 				18A8BE0F29D0C8BE00BC4F86 /* ViewModels */,
-				18A8BE0E29D0C8A400BC4F86 /* TableViewCells */,
+				18A8BE0E29D0C8A400BC4F86 /* TableViewAndCollectionViewCells */,
 				18A8BE0D29D0C87500BC4F86 /* Models */,
 				18A8BDE529CF322000BC4F86 /* Utills */,
 				18402AE329CC9E5A00278A89 /* Json */,
@@ -188,7 +194,8 @@
 		18402AD329CC8FED00278A89 /* MainCircleVC */ = {
 			isa = PBXGroup;
 			children = (
-				18402AA229CC8DF300278A89 /* ViewController.swift */,
+				18A8BE1829D2299400BC4F86 /* FlowLayout.swift */,
+				18A8BE1A29D229B800BC4F86 /* CircleVC.swift */,
 			);
 			path = MainCircleVC;
 			sourceTree = "<group>";
@@ -267,12 +274,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		18A8BE0E29D0C8A400BC4F86 /* TableViewCells */ = {
+		18A8BE0E29D0C8A400BC4F86 /* TableViewAndCollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				18A8BE1D29D2C01400BC4F86 /* BubbleCollectionViewCell */,
 				18A8BDFF29CF8D9100BC4F86 /* FloatingViewTVCell */,
 			);
-			path = TableViewCells;
+			path = TableViewAndCollectionViewCells;
 			sourceTree = "<group>";
 		};
 		18A8BE0F29D0C8BE00BC4F86 /* ViewModels */ = {
@@ -292,6 +300,15 @@
 				18402AD329CC8FED00278A89 /* MainCircleVC */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		18A8BE1D29D2C01400BC4F86 /* BubbleCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				18A8BE1E29D2C03700BC4F86 /* BubbleCollectionViewCell.swift */,
+				18A8BE1F29D2C03700BC4F86 /* BubbleCollectionViewCell.xib */,
+			);
+			path = BubbleCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		2725496866D762074C52C260 /* Frameworks */ = {
@@ -434,6 +451,7 @@
 				18A8BDEE29CF457100BC4F86 /* circlemember.json in Resources */,
 				18402AE229CC9E5600278A89 /* circlelist.json in Resources */,
 				18402AA629CC8DF300278A89 /* Main.storyboard in Resources */,
+				18A8BE2129D2C03700BC4F86 /* BubbleCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,13 +613,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18402AA329CC8DF300278A89 /* ViewController.swift in Sources */,
 				18A8BE0229CF8DB200BC4F86 /* FloatingViewTVCell.swift in Sources */,
+				18A8BE1929D2299400BC4F86 /* FlowLayout.swift in Sources */,
 				18A8BDF629CF6A4800BC4F86 /* CircleMapVC+MapViewDelegate.swift in Sources */,
 				18A8BDF829CF716400BC4F86 /* CircleMapViewModel.swift in Sources */,
 				18A8BDE929CF326000BC4F86 /* Utils.swift in Sources */,
 				18402ADE29CC965100278A89 /* Network.swift in Sources */,
 				18A8BE0829D0262700BC4F86 /* MapMarkerModel.swift in Sources */,
+				18A8BE1B29D229B800BC4F86 /* CircleVC.swift in Sources */,
 				18A8BDEC29CF32ED00BC4F86 /* Extension.swift in Sources */,
 				18A8BDF129CF506D00BC4F86 /* CircleMapVC.swift in Sources */,
 				18A8BE0C29D0A62600BC4F86 /* ImagePickerManager.swift in Sources */,
@@ -612,6 +631,7 @@
 				18402AD529CC901300278A89 /* CircleViewModel.swift in Sources */,
 				18A8BE0A29D07DBC00BC4F86 /* LocationManager.swift in Sources */,
 				18A8BDFE29CF8D4A00BC4F86 /* FloatingViewVC+TableViewDelegates.swift in Sources */,
+				18A8BE2029D2C03700BC4F86 /* BubbleCollectionViewCell.swift in Sources */,
 				18A8BDF429CF69F000BC4F86 /* FloatingViewVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

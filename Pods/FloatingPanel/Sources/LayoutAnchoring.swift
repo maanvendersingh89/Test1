@@ -21,10 +21,19 @@ import UIKit
     ///     - edge: Specify the edge of ``FloatingPanelController``'s view. This is the staring point of the offset.
     ///     - referenceGuide: The rectangular area to lay out the content. If it's set to `.safeArea`, the panel content lays out inside the safe area of its ``FloatingPanelController``'s view.
     @objc public init(absoluteInset: CGFloat, edge: FloatingPanelReferenceEdge, referenceGuide: FloatingPanelLayoutReferenceGuide) {
+        
         self.inset = absoluteInset
         self.referenceGuide = referenceGuide
         self.referenceEdge = edge
         self.isAbsolute = true
+        
+//        if inset == 150{
+//            self.view.translatesAutoresizingMaskIntoConstraints = false
+//            NSLayoutConstraint.activate([
+//                self.surfaceView.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: +10.0),
+//                floatingPC.surfaceView.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -10.0),
+//            ])
+//        }
     }
 
     /// Returns a layout anchor with the specified inset by a fractional value, edge and reference guide for a panel.
@@ -55,26 +64,35 @@ public extension FloatingPanelLayoutAnchor {
         let layoutGuide = referenceGuide.layoutGuide(vc: vc)
         switch position {
         case .top:
-            return layoutConstraints(layoutGuide, for: vc.surfaceView.bottomAnchor)
+            return layoutConstraints(vc:vc,layoutGuide, for: vc.surfaceView.bottomAnchor)
         case .left:
             return layoutConstraints(layoutGuide, for: vc.surfaceView.rightAnchor)
         case .bottom:
-            return layoutConstraints(layoutGuide, for: vc.surfaceView.topAnchor)
+            return layoutConstraints(vc:vc,layoutGuide, for: vc.surfaceView.topAnchor)
         case .right:
             return layoutConstraints(layoutGuide, for: vc.surfaceView.leftAnchor)
         }
+       
     }
 
-    private func layoutConstraints(_ layoutGuide: LayoutGuideProvider, for edgeAnchor: NSLayoutYAxisAnchor) -> [NSLayoutConstraint] {
+    private func layoutConstraints(vc: FloatingPanelController,_ layoutGuide: LayoutGuideProvider, for edgeAnchor: NSLayoutYAxisAnchor) -> [NSLayoutConstraint] {
         switch referenceEdge {
         case .top:
             if isAbsolute {
-                return [edgeAnchor.constraint(equalTo: layoutGuide.topAnchor, constant: inset)]
+                let leftEge = vc.leftEge!
+                let righEge = vc.rightEge!
+                return [edgeAnchor.constraint(equalTo: layoutGuide.topAnchor, constant: inset),layoutGuide.leftAnchor.constraint(equalTo: leftEge ,constant: 0.0),layoutGuide.rightAnchor.constraint(equalTo: righEge ,constant: 0.0)]
+               
             }
             let offsetAnchor = layoutGuide.topAnchor.anchorWithOffset(to: edgeAnchor)
             return [offsetAnchor.constraint(equalTo:layoutGuide.heightAnchor, multiplier: inset)]
         case .bottom:
             if isAbsolute {
+                if inset == 150 || inset == 0.5{
+                    let leftEge = vc.leftEge!
+                    let righEge = vc.rightEge!
+                    return [layoutGuide.bottomAnchor.constraint(equalTo: edgeAnchor, constant: inset),layoutGuide.leftAnchor.constraint(equalTo: leftEge ,constant: 10.0),layoutGuide.rightAnchor.constraint(equalTo: righEge ,constant: -10.0)]
+                }
                 return [layoutGuide.bottomAnchor.constraint(equalTo: edgeAnchor, constant: inset)]
             }
             let offsetAnchor = edgeAnchor.anchorWithOffset(to: layoutGuide.bottomAnchor)

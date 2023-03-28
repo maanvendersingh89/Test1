@@ -22,25 +22,55 @@ class CircleMapVC: UIViewController, FloatingPanelControllerDelegate, MapPinDele
     var locationManager : LocationManager?
     var currentLatLong = CLLocationCoordinate2D()
     var image = UIImage()
+    @IBOutlet weak var settingBtn: UIButton!
+    @IBOutlet weak var filterBtn: UIButton!
     var clPhotoArray = [CLLocationCoordinate2D]()
-    
+    var circleList = CircleList()
     var circleMapViewModel = CircleMapViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        print("Data Passed \(circleList.circleName ?? "you")")
         self.locationManager = LocationManager(controller: self, locationDelegate: self)
         self.circleMapViewModel.mapDelegates = self
         self.locationManager?.locationDelegate = self
-        
+        self.navigationController?.navigationBar.isHidden = true
+        filterBtn.layer.cornerRadius = filterBtn.frame.size.width/2
+        settingBtn.layer.cornerRadius = settingBtn.frame.size.width/2
         let floatingPC = FloatingPanelController()
         floatingPC.delegate = self
+        floatingPC.behavior = FloatingPanelStocksBehavior()
+        floatingPC.leftEge = self.view.leftAnchor
+        floatingPC.rightEge = self.view.rightAnchor
+        // Initialize FloatingPanelController and add the view
+        floatingPC.surfaceView.backgroundColor = UIColor(displayP3Red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)
+        floatingPC.surfaceView.frame = CGRect(x: 20, y: self.view.frame.size.height-floatingPC.surfaceView.frame.size.height, width: self.view.frame.size.width-40, height: floatingPC.surfaceView.frame.size.height)
+        floatingPC.surfaceView.appearance.cornerRadius = 10.0
+        floatingPC.surfaceView.appearance.shadows = []
+        floatingPC.surfaceView.appearance.borderWidth = 1.0 / traitCollection.displayScale
+        floatingPC.surfaceView.appearance.borderColor = UIColor.black.withAlphaComponent(0.2)
+       
+        
+        
         guard let contentVC = storyboard?.instantiateViewController(withIdentifier: "FloatingViewVC") as? FloatingViewVC else {
             return
         }
+        
         floatingPC.set(contentViewController: contentVC)
+        
         floatingPC.addPanel(toParent: self)
+        
+//        floatingPC.view.translatesAutoresizingMaskIntoConstraints = false
+//        NSLayoutConstraint.activate([
+//            floatingPC.surfaceView.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: +20.0),
+//            floatingPC.surfaceView.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -20.0),
+//        ])
+        
         circleMapViewModel.setMapForLocation()
       
+        
+        
         locManager.requestWhenInUseAuthorization()
         switch locManager.authorizationStatus {
         case .authorizedAlways , .authorizedWhenInUse:
@@ -116,7 +146,19 @@ class CircleMapVC: UIViewController, FloatingPanelControllerDelegate, MapPinDele
         
     }
     
+    @IBAction func action_btnBackTapped(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+   
     
 }
 
+
+
+// MARK: - FloatingPanelBehavior
+
+class FloatingPanelStocksBehavior: FloatingPanelBehavior {
+    let springDecelerationRate: CGFloat = UIScrollView.DecelerationRate.fast.rawValue
+    let springResponseTime: CGFloat = 0.25
+}
 

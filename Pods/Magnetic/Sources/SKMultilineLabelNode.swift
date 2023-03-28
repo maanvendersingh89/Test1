@@ -88,6 +88,8 @@ import SpriteKit
                          shape.fillColor = UIColor.clear
                          shape.strokeColor = UIColor.lightText
                      shape.lineWidth = 0.8
+                     
+                    
                      self.addChild(shape)
                  }
                

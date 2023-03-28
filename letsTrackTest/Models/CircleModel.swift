@@ -9,11 +9,11 @@ import Foundation
 import UIKit
 
 struct CircleModel: Codable {
-    let result: Result?
-    let circleCount:Int?
-    let circleList: [CircleList]?
-    let bleTagList: [BleTagList]?
-    let deviceListList: [String]?
+    var result: Result?
+    var circleCount:Int?
+    var circleList: [CircleList]?
+    var bleTagList: [BleTagList]?
+    var deviceListList: [String]?
     
     enum CodingKeys: String, CodingKey {
 
@@ -28,9 +28,9 @@ struct CircleModel: Codable {
 }
 
 struct Result : Codable {
-    let code:Int?
-    let msg:String?
-    let res:String?
+    var code:Int?
+    var msg:String?
+    var res:String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -44,9 +44,9 @@ struct Result : Codable {
 }
 
 struct CircleData: Codable{
-    let id:Int?
-    let circleCount:Int?
-    let circleName:String?
+    var id:Int?
+    var circleCount:Int?
+    var circleName:String?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -57,17 +57,17 @@ struct CircleData: Codable{
 }
 
 struct CircleList : Codable {
-    let circleId:Int?
-    let circleName:String?
-    let circleColorCode:String?
-    let circleType:String?
-    let isActive:Int?
-    let isPersonal:Bool?
-    let isExpired:Bool?
-    let memberCount:Int?
-    let totalTimeSlot:Int?
-    let createdDate:Int?
-    let noOfVisits:Int?
+    var circleId:Int?
+    var circleName:String?
+    var circleColorCode:String?
+    var circleType:String?
+    var isActive:Int?
+    var isPersonal:Bool?
+    var isExpired:Bool?
+    var memberCount:Int?
+    var totalTimeSlot:Int?
+    var createdDate:Int?
+    var noOfVisits:Int?
 
     enum CodingKeys: String, CodingKey {
 
@@ -88,15 +88,15 @@ struct CircleList : Codable {
 }
 
 struct BleTagList : Codable {
-    let bleTagId:Int?
-    let shortName:String?
-    let iconPath:String?
-    let iconId:Int?
-    let userId:Int?
-    let bleTagMacID:String?
-    let markedAsLost:Bool?
-    let recvTime:Int?
-    let locationStatus:Int?
+    var bleTagId:Int?
+    var shortName:String?
+    var iconPath:String?
+    var iconId:Int?
+    var userId:Int?
+    var bleTagMacID:String?
+    var markedAsLost:Bool?
+    var recvTime:Int?
+    var locationStatus:Int?
 
     enum CodingKeys: String, CodingKey {
 

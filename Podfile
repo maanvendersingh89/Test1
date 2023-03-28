@@ -8,6 +8,7 @@ target 'LetsTrackTest' do
   pod 'FloatingPanel'
   pod 'GoogleMaps'
   pod 'SDWebImage', '~> 5.0'
+  pod 'WatchLayout'
   # Pods for LetsTrackTest
 
   target 'LetsTrackTestTests' do
